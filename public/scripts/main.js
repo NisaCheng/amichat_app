@@ -112,6 +112,18 @@ function onMessageFormSubmit(e) {
   }
 }
 
+// add event listener on submit button
+
+var btn = document.getElementById("submit");
+btn.addEventListener('click', function() {
+const msg = document.querySelector("#message")
+const msgContainer = document.querySelector("#messages")
+p.innerText = msg.value;
+
+
+}
+)
+
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
 function authStateObserver(user) {
   if (user) { // User is signed in!
@@ -165,6 +177,8 @@ function resetMaterialTextfield(element) {
   element.value = '';
   element.parentNode.MaterialTextfield.boundUpdateClassesHandler();
 }
+
+
 
 // Template for messages.
 var MESSAGE_TEMPLATE =
@@ -284,21 +298,41 @@ function checkSetup() {
   }
 }
 // Shortcuts to DOM Elements.
-var messageListElement;
-var messageFormElement;
-var messageInputElement;
-var submitButtonElement;
-var imageButtonElement;
-var imageFormElement;
-var mediaCaptureElement;
-var userPicElement;
-var userNameElement;
-var signInButtonElement;
-var signOutButtonElement;
-var signInSnackbarElement;
+var messageListElement = document.getElementById('messages');
+var messageFormElement = document.getElementById('message-form');
+var messageInputElement = document.getElementById('message');
+var submitButtonElement = document.getElementById('submit');
+var imageButtonElement = document.getElementById('submitImage');
+var imageFormElement = document.getElementById('image-form');
+var mediaCaptureElement = document.getElementById('mediaCapture');
+var userPicElement = document.getElementById('user-pic');
+var userNameElement = document.getElementById('user-name');
+var signInButtonElement = document.getElementById('sign-in');
+var signOutButtonElement = document.getElementById('sign-out');
+var signInSnackbarElement = document.getElementById('must-signin-snackbar');
+
+submitButtonElement.addEventListener('click', function() {
+  const btnEnable = document.querySelector('#submit'); 
+  btnEnableEneable.disable = false;
+}
+)
 
 // initialize Firebase
-initFirebase();
+function initFirebase(){
+  firebase.initializeApp({
+    "apiKey": "AIzaSyDz0Xc2B-BB4Ikux2ne9ABxHZRBQIFHZkg",
+    "authDomain": "friendlychat-2068e.firebaseapp.com",
+    "databaseURL": "https://friendlychat-2068e.firebaseio.com",
+    "projectId": "friendlychat-2068e",
+    "storageBucket": "friendlychat-2068e.appspot.com",
+    "messagingSenderId": "1014510563829",
+    "appId": "1:1014510563829:web:d8648ececd5f6211e6f0bc",
+    "measurementId": "G-LY69RTS6GB"
+  });
+}
+
+
+
 // Checks that Firebase has been imported.
 checkSetup();
 

@@ -28,9 +28,26 @@ main, #messages-card {
 #messages-card {
   margin-top: 15px;
 }
+
+.mdl-textfield__label {
+  margin-left: 3%;
+}
+
+.imageColor {
+  background-color: #7fa8fa;
+}
+
+
+
+.mdl-layout__header {
+background-color: #7fa8fa;
+}
+
 .mdl-layout__header-row span {
   margin-left: 15px;
   margin-top: 17px;
+  background-color:#7fa8fa;
+  
 }
 .mdl-grid {
   max-width: 1024px;
@@ -41,9 +58,15 @@ main, #messages-card {
   top: 8px;
   position: relative;
 }
+
+h5 {
+  margin-left: 2%;
+}
+
 .mdl-layout__header-row {
   padding: 0;
   margin: 0 auto;
+  background-color:#7fa8fa;
 }
 .mdl-card__supporting-text {
   width: auto;
@@ -174,6 +197,7 @@ main, #messages-card {
   header {
     height: 113px;
     padding-bottom: 80px !important;
+    
   }
   #user-container {
     top: 72px;
@@ -189,6 +213,8 @@ main, #messages-card {
     background-size: 33px;
   }
 }
+
+
 .mdl-textfield__label:after {
   background-color: #0288D1;
 }
@@ -199,3 +225,5 @@ main, #messages-card {
   top: -1px;
   margin-right: 5px;
 }
+
+
