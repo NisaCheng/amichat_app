@@ -71,7 +71,7 @@
         <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
         Sign-out
         </button>
-        <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
+        <button id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--black">
           <i class="material-icons">account_circle</i>Sign-in with Google
         </button>
       </div>
@@ -87,7 +87,7 @@
           <div id="messages">
            
           </div>
-        </div>
+        
         <form id="message-form" action="#">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="text" id="message" autocomplete="off">
@@ -105,6 +105,7 @@
           <i class="material-icons">image</i>
         </button>
     </form>
+      </div>
       </div>
 
       <div id="must-signin-snackbar" class="mdl-js-snackbar mdl-snackbar">
@@ -126,10 +127,9 @@
 <script src="/__/firebase/7.16.1/firebase-firestore.js"></script>
 <script src="/__/firebase/7.16.1/firebase-performance.js"></script>
 
-<script src="scripts/main.js"></script>
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.17.1/firebase-app.js"></script>
+
+
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -141,7 +141,7 @@
 
 
 </script>
-
+<script src="scripts/main.js"></script>
 
 
 </body>

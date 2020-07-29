@@ -16,14 +16,20 @@
 'use strict';
 
 // Signs-in Friendly Chat.
-function signIn() {
-  alert('TODO: Implement Google Sign-In');
   // TODO 1: Sign in Firebase with credential from the Google user.
+
+  function signIn() {
+    // Sign into Firebase using popup auth & Google as the identity provider.
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider);
+  
 }
 
 // Signs-out of Friendly Chat.
-function signOut() {
-  // TODO 2: Sign out of Firebase.
+  function signOut() {
+    // Sign out of Firebase.
+    firebase.auth().signOut();
+  
 }
 
 //Initialize firebase.
@@ -36,18 +42,19 @@ function initFirebaseAuth() {
 }
 
 // Returns the signed-in user's profile Pic URL.
-function getProfilePicUrl() {
-  // TODO 4: Return the user's profile pic URL.
-}
+
+  function getProfilePicUrl() {
+    return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
+  }
 
 // Returns the signed-in user's display name.
 function getUserName() {
-  // TODO 5: Return the user's display name.
+  return firebase.auth().currentUser.displayName;
 }
 
 // Returns true if a user is signed-in.
 function isUserSignedIn() {
-  // TODO 6: Return true if a user is signed-in.
+  return !!firebase.auth().currentUser;
 }
 
 // Saves a new message on the Firebase DB.
@@ -313,9 +320,9 @@ var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
 submitButtonElement.addEventListener('click', function() {
   const btnEnable = document.querySelector('#submit'); 
-  btnEnableEneable.disable = false;
-}
-)
+  btnEnable.disable = false;
+})
+
 
 // initialize Firebase
 function initFirebase(){
@@ -353,7 +360,10 @@ imageButtonElement.addEventListener('click', function(e) {
 mediaCaptureElement.addEventListener('change', onMediaFileSelected);
 
 // initialize Firebase Auth
-initFirebaseAuth();
+function initFirebaseAuth() {
+  // Listen to auth state changes.
+  firebase.auth().onAuthStateChanged(authStateObserver);
+}
 
 // TODO: Enable Firebase Performance Monitoring.
 
