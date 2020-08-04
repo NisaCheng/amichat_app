@@ -1,4 +1,4 @@
-# amichat_app
+Amichat App 
 
 ## Descriptions
 Amichat is a chat web application that allows users to communicate via picture messages and text messages in a group chat setting. 
