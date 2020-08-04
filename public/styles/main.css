@@ -43,10 +43,27 @@ main, #messages-card {
 background-color: #7fa8fa;
 }
 
+.mdl-switch__track {
+  background: rgba(255,255,255,.26);
+
+}
+
+.mdl-switch.is-checked .mdl-switch__track {
+  background: rgba(255,255,255,.26);
+}
+
+.mdl-switch.is-checked .mdl-switch__thumb {
+  background: #fafafa;
+}
+
+.mdl-switch {
+  margin-left: 2%;
+}
+
+
 .mdl-layout__header-row span {
-  margin-left: 15px;
   margin-top: 17px;
-  background-color:#7fa8fa;
+  
   
 }
 .mdl-grid {
@@ -202,7 +219,7 @@ h5 {
   }
   #user-container {
     top: 72px;
-    background-color: rgb(3,155,229);
+    background-color: rgba(16, 16, 16);
     height: 38px;
     padding-top: 3px;
     padding-right: 2px;
